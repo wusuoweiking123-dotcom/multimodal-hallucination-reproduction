@@ -1,0 +1,22 @@
+name: Bootstrap repository history
+
+on:
+  push:
+    paths:
+      - multimodal-hallucination-reproduction-v2.bundle
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish the bundled repository history
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git clone -b main multimodal-hallucination-reproduction-v2.bundle /tmp/project
+          git -C /tmp/project remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git -C /tmp/project push --force origin main

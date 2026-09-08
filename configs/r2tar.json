@@ -1,0 +1,30 @@
+{
+  "method": "R2-TAR",
+  "models": {
+    "Kimi-VL-A3B-Thinking": {
+      "reasoning_first_layer": 5,
+      "tau_reasoning": 0.01,
+      "gain_reasoning": 1.40,
+      "perception_last_layer": 10,
+      "tau_perception": 0.27,
+      "gain_perception": 1.20
+    },
+    "Ocean-R1-7B-Instruct": {
+      "reasoning_first_layer": 3,
+      "tau_reasoning": 0.01,
+      "gain_reasoning": 1.30,
+      "perception_last_layer": 7,
+      "tau_perception": 0.22,
+      "gain_perception": 1.16
+    },
+    "R1-Onevision": {
+      "reasoning_first_layer": 3,
+      "tau_reasoning": 0.01,
+      "gain_reasoning": 1.30,
+      "perception_last_layer": 7,
+      "tau_perception": 0.30,
+      "gain_perception": 1.20
+    }
+  }
+}
+

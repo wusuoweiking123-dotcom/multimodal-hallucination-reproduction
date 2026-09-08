@@ -1,0 +1,10 @@
+{
+  "method": "CMAC",
+  "paper_equations": [8, 9, 10, 11, 12, 13],
+  "alpha": 3.0,
+  "gamma": 2.0,
+  "top_p": 1.0,
+  "cross_modal_threshold": "per-head mean attention logit",
+  "value_replacement": "per-batch/per-head scalar mean across image-token and value dimensions"
+}
+
